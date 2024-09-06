@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ArrayList<String> strings = new ArrayList<>();
-        strings.add("test1");
-        strings.add("test2");
-        strings.add("test3");
-        strings.add("test4");
-        strings.add("test5");
+        strings.add("Wowza");
+        strings.add("Android...?");
+        strings.add("Snuffleupagus");
+        strings.add("...");
+        strings.add("Collapsible Lung");
         strings.add("Boo! You're scared.");
         strings.add("asdf");
 
