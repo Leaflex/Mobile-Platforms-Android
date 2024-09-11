@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="cardinal">#C41E3A</color>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="gold">#F1BE48</color>
+    <color name="blue">#4169e1</color>
 </resources>
