@@ -2,6 +2,7 @@ package edu.iastate.netid.pocketcalculator;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,23 @@ public class MainActivity extends AppCompatActivity {
      */
     private TextView mCalculatorDisplay;
 
+    private Button ClearBtn;
+    private Button EqualsBtn;
+    private Button DecimalBtn;
+    private Button DivideBtn;
+    private Button AddBtn;
+    private Button SubtractBtn;
+    private Button MultiplyBtn;
+    private Button Btn1;
+    private Button Btn2;
+    private Button Btn3;
+    private Button Btn4;
+    private Button Btn5;
+    private Button Btn6;
+    private Button Btn7;
+    private Button Btn8;
+    private Button Btn9;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +44,24 @@ public class MainActivity extends AppCompatActivity {
            the instance of the calculator display's TextView.  You need to create this TextView
            and set its ID to CalculatorDisplay in your layout resource file.
          */
-        //mCalculatorDisplay = findViewById(R.id.CalculatorDisplay);
+        mCalculatorDisplay = findViewById(R.id.CalculatorDisplay);
+        EqualsBtn = findViewById(R.id.btnEquals);
+        ClearBtn = findViewById(R.id.clear_btn);
+        MultiplyBtn = findViewById(R.id.btnMultiply);
+        DivideBtn = findViewById(R.id.btnDivide);
+        AddBtn = findViewById(R.id.btnAdd);
+        SubtractBtn = findViewById(R.id.btnSubtract);
+        DecimalBtn = findViewById(R.id.btnDecimal);
+        Btn1 = findViewById(R.id.btn1);
+        Btn2 = findViewById(R.id.btn2);
+        Btn3 = findViewById(R.id.btn3);
+        Btn4 = findViewById(R.id.btn4);
+        Btn5 = findViewById(R.id.btn5);
+        Btn6 = findViewById(R.id.btn6);
+        Btn7 = findViewById(R.id.btn7);
+        Btn8 = findViewById(R.id.btn8);
+        Btn9 = findViewById(R.id.btn9);
+
     }
 
     /* TODO - add event listeners for your calculator's buttons. See the model's API to figure out
