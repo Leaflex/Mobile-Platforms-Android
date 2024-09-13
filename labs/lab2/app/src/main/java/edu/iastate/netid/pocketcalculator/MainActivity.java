@@ -1,7 +1,6 @@
 package edu.iastate.netid.pocketcalculator;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,24 +16,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private TextView mCalculatorDisplay;
 
-    private Button ClearBtn;
-    private Button EqualsBtn;
-    private Button DecimalBtn;
-    private Button DivideBtn;
-    private Button AddBtn;
-    private Button SubtractBtn;
-    private Button MultiplyBtn;
-    private Button Btn1;
-    private Button Btn2;
-    private Button Btn3;
-    private Button Btn4;
-    private Button Btn5;
-    private Button Btn6;
-    private Button Btn7;
-    private Button Btn8;
-    private Button Btn9;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,36 +26,168 @@ public class MainActivity extends AppCompatActivity {
            and set its ID to CalculatorDisplay in your layout resource file.
          */
         mCalculatorDisplay = findViewById(R.id.CalculatorDisplay);
-        EqualsBtn = findViewById(R.id.btnEquals);
-        ClearBtn = findViewById(R.id.clear_btn);
-        MultiplyBtn = findViewById(R.id.btnMultiply);
-        DivideBtn = findViewById(R.id.btnDivide);
-        AddBtn = findViewById(R.id.btnAdd);
-        SubtractBtn = findViewById(R.id.btnSubtract);
-        DecimalBtn = findViewById(R.id.btnDecimal);
-        Btn1 = findViewById(R.id.btn1);
-        Btn2 = findViewById(R.id.btn2);
-        Btn3 = findViewById(R.id.btn3);
-        Btn4 = findViewById(R.id.btn4);
-        Btn5 = findViewById(R.id.btn5);
-        Btn6 = findViewById(R.id.btn6);
-        Btn7 = findViewById(R.id.btn7);
-        Btn8 = findViewById(R.id.btn8);
-        Btn9 = findViewById(R.id.btn9);
 
-    }
+        Button equalsBtn = findViewById(R.id.btnEquals);
+        Button clearBtn = findViewById(R.id.clear_btn);
+        Button MultiplyBtn = findViewById(R.id.btnMultiply);
+        Button DivideBtn = findViewById(R.id.btnDivide);
+        Button AddBtn = findViewById(R.id.btnAdd);
+        Button SubtractBtn = findViewById(R.id.btnSubtract);
+        Button DecimalBtn = findViewById(R.id.btnDecimal);
 
-    /* TODO - add event listeners for your calculator's buttons. See the model's API to figure out
-       what methods should be called. The equals button event listener has been done for you. Once
-       you've created the layout, you'll need to add these methods as the onClick() listeners
-       for the corresponding buttons in the XML layout. */
+        equalsBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.calculateResult();
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
+        clearBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.clear();
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
+        MultiplyBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputOperation(CalculationStream.Operation.MULTIPLY);
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
+        DivideBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputOperation(CalculationStream.Operation.DIVIDE);
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
+        AddBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputOperation(CalculationStream.Operation.ADD);
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
+        SubtractBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputOperation(CalculationStream.Operation.SUBTRACT);
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
+        DecimalBtn.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.DECIMAL);
+            } finally {
+                updateCalculatorDisplay();
+            }
+        });
 
-    public void onEqualClicked(View view) {
-        try {
-            mCalculationStream.calculateResult();
-        } finally {
-            updateCalculatorDisplay();
-        }
+        Button Btn0 = findViewById(R.id.btn0);
+        Button Btn1 = findViewById(R.id.btn1);
+        Button Btn2 = findViewById(R.id.btn2);
+        Button Btn3 = findViewById(R.id.btn3);
+        Button Btn4 = findViewById(R.id.btn4);
+        Button Btn5 = findViewById(R.id.btn5);
+        Button Btn6 = findViewById(R.id.btn6);
+        Button Btn7 = findViewById(R.id.btn7);
+        Button Btn8 = findViewById(R.id.btn8);
+        Button Btn9 = findViewById(R.id.btn9);
+
+        Btn0.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.ZERO);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn1.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.ONE);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn2.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.TWO);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn3.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.THREE);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn4.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.FOUR);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn5.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.FIVE);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn6.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.SIX);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn7.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.SEVEN);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn8.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.EIGHT);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+        Btn9.setOnClickListener(view -> {
+            try {
+                mCalculationStream.inputDigit(CalculationStream.Digit.NINE);
+            } finally {
+                updateCalculatorDisplay();
+            }
+
+
+        });
+
+
     }
 
     /**
