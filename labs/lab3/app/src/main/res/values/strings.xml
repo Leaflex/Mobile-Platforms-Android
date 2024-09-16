@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lab3</string>
+    <string name="reset_state">00:00:00.0</string>
+    <string name="reset">Reset</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+</resources>
