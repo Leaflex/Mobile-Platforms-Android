@@ -49,9 +49,10 @@ public class StopwatchViewModel extends ViewModel {
     }
 
     public void resetStopwatch() {
-        stopStopwatch();
-        elapsedTime.setValue(0L);
+        startTime = SystemClock.elapsedRealtime();
+        elapsedTime.setValue(0L);  // Reset the visible elapsed time to 0
     }
+
 
     @Override
     protected void onCleared() {
