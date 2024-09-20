@@ -9,21 +9,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.example.lab3.R;
+import com.example.lab3.StopwatchViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button start_stop_btn = findViewById(R.id.startStopBtn);
-    TextView timer_text_view = findViewById(R.id.timerTextView);
+    private StopwatchViewModel viewModel;
+    private TextView tvTime;
+    private Button btnStartStop, btnReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        // Initialize ViewModel
+        viewModel = new ViewModelProvider(this).get(StopwatchViewModel.class);
+
+        // TODO: Initialize UI components (TextView, Buttons)
+
+        // TODO: Set up button listeners for Start/Stop and Reset
     }
+
+    // TODO: Format elapsed time for display
 }
