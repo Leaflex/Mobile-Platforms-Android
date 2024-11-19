@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:text="Steps"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@id/stepsView"
+        app:layout_constraintBottom_toBottomOf="@id/stepCountView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/stepsView"
+        android:id="@+id/stepCountView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10000"
@@ -39,6 +39,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/stepsView" />
+        app:layout_constraintTop_toTopOf="@id/stepCountView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
