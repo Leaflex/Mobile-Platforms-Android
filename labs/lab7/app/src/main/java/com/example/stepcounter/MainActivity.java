@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private float lastAcceleration = 0;
     private float currentAcceleration = 0;
     private float accelerationDifference = 0;
-    private static final float STEP_THRESHOLD = 2.0f;
+    private static final float STEP_THRESHOLD = 10.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
